@@ -3,8 +3,11 @@ import pytesseract
 from PIL import Image
 
 Image_filename = sys.argv[1]
+
 Image = Image.open(Image_filename)
 
-string = pytesseract.image_to_string(Image, lang='eng')
+bw_image = Image.convert('L')
 
-print(string)
+string_rus = pytesseract.image_to_string(bw_image, lang='rus')
+
+print(string_rus)
