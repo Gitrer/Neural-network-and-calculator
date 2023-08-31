@@ -13,4 +13,4 @@ expression = sys.argv[1]
 # Вычисляем результат и выводим его
 result = calculate(expression)
 print(result)
-print(expression)
+
