@@ -8,9 +8,11 @@ def calculate(expression):
         return "Invalid expression"
 
 # Получаем введенное выражение из аргумента командной строки
-expression = sys.argv[1]
+raw_expression = sys.argv[1]
+
+# Удаляем пробелы и другие символы справа и слева от выражения
+expression = raw_expression.strip()
 
 # Вычисляем результат и выводим его
 result = calculate(expression)
 print(result)
-
